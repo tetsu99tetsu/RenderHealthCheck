@@ -1,0 +1,14 @@
+# .github/workflows/ping-render.yml
+name: Ping Render App
+
+on:
+  schedule:
+    - cron: '*/15 * * * *' # 15分おき（UTC）
+  workflow_dispatch:
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send HTTP Request
+        run: curl -m 10 https://https://webappnewtest0b.onrender.com/Home/Index || true
