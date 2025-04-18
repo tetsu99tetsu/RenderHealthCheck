@@ -3,7 +3,7 @@ name: Ping Render App
 
 on:
   schedule:
-    - cron: '*/15 * * * *' # 15分おき（UTC）
+    - cron: '*/13 * * * *' # 15分おき（UTC）
   workflow_dispatch:
 
 jobs:
