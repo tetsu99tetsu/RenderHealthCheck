@@ -11,4 +11,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Send HTTP Request
-        run: curl -L -v -m 10 https://https://webappnewtest0b.onrender.com/Home/Index || true
+        run: curl -L -v -m 10 https://webappnewtest0b.onrender.com/Home/Index || true
