@@ -3,8 +3,15 @@ name: Ping Render Apps
 
 on:
   schedule:
-    - cron: '*/5 * * * *'  # 13分おき（UTC時間）
-  workflow_dispatch:
+    - cron: '00 * * * *'  # 13分おき（UTC時間）
+    - cron: '10 * * * *'  # 13分おき（UTC時間）
+    - cron: '20 * * * *'  # 13分おき（UTC時間）
+    - cron: '30 * * * *'  # 13分おき（UTC時間）
+    - cron: '40 * * * *'  # 13分おき（UTC時間）
+    - cron: '50 * * * *'  # 13分おき（UTC時間）
+    - cron: '*/8 * * * *'  # 13分おき（UTC
+
+workflow_dispatch:
 
 jobs:
   ping:
