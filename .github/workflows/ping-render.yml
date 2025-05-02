@@ -20,10 +20,10 @@ jobs:
 
           for URL in "${SITES[@]}"; do
             echo "Pinging $URL ..."
-            STATUS_CODE=$(curl -s -o /dev/null -w "%{http_code}" -m 10 "$URL")
+            STATUS_CODE=$(curl -s -o /dev/null -w "%{http_code}" -m 10 "$URL" || echo "000")
             echo "Status Code: $STATUS_CODE"
 
-            if [ "$STATUS_CODE" -ne 200 ]; then
+            if [ "$STATUS_CODE" != "200" ]; then
               echo "Warning: $URL may not have responded successfully (HTTP $STATUS_CODE)"
             fi
             echo ""
